@@ -1,4 +1,4 @@
-body {
+html{
   font-family: Roboto, sans-serif;
   font-weight: 500;
   margin: 0;
@@ -26,14 +26,14 @@ a {
 
 /* Меню навигации */
 .moyo-header__nav-list {
-  display: flex;      /* элементы в ряд */
-  list-style: none;   /* убираем точки */
+  display: flex; /* элементы в ряд */
+  list-style: none; /* убираем точки */
   margin: 0;
   padding: 0;
 }
 
 .moyo-header__nav-item {
-  margin-left: 20px;  /* расстояние между пунктами */
+  margin-left: 20px; /* расстояние между пунктами */
 }
 
 .moyo-header__nav-item:first-child {
@@ -61,5 +61,3 @@ a {
   height: 2px;
   background-color: blue;
 }
-
-
