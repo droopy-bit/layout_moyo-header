@@ -1,13 +1,18 @@
-html {
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-  color: black;
+:root {
+  --blue: #00acdc;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
 }
 
 a {
@@ -16,23 +21,30 @@ a {
 }
 
 .moyo-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 50px;
+  align-items: baseline;
+}
+
+.moyo-header__container {
+  width: 1200px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 20px;
-  height: 60px;
 }
 
 .moyo-header__logo {
-  margin-right: 100px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+
 }
 
 .moyo-header__nav-list {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .moyo-header__nav-item {
@@ -48,11 +60,15 @@ a {
   align-items: center;
   height: 60px;
   position: relative;
-  transition: color 0.3s;
+  text-transform: uppercase;
 }
 
 .moyo-header__nav-link:hover {
-  color: #00ACDC
+  color: var(--blue);
+}
+
+.moyo-header__nav-link.is-active {
+  color: var(--blue);
 }
 
 .moyo-header__nav-link.is-active::after {
@@ -60,11 +76,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 37px;
   height: 4px;
-  background-color: #00ACDC;
-}
-
-.color {
-  color: #00ACDC;
+  background-color: var(--blue);
 }
