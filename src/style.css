@@ -1,7 +1,65 @@
-html {
+body {
   font-family: Roboto, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings: 'wdth' 500;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: black;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.moyo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* логотип слева, меню справа */
+  width: 100%;
+  padding: 0 20px;
+  height: 60px;
+}
+
+/* Меню навигации */
+.moyo-header__nav-list {
+  display: flex;      /* элементы в ряд */
+  list-style: none;   /* убираем точки */
+  margin: 0;
+  padding: 0;
+}
+
+.moyo-header__nav-item {
+  margin-left: 20px;  /* расстояние между пунктами */
+}
+
+.moyo-header__nav-item:first-child {
+  margin-left: 0;
+}
+
+.moyo-header__nav-link {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.moyo-header__nav-link:hover {
+  color: blue;
+}
+
+.moyo-header__nav-link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: blue;
+}
+
+
